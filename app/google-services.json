@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "991848545817",
+    "project_id": "soonodekar-institutemanagement",
+    "storage_bucket": "soonodekar-institutemanagement.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:991848545817:android:cd8c73258ae467de32b488",
+        "android_client_info": {
+          "package_name": "com.soonodekar.myapp1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "991848545817-q7r9836v0nnebfcdor536ciev5qmgnv3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDxTQai5BBACZByHRomE5fWcd2LyGVIvi8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "991848545817-q7r9836v0nnebfcdor536ciev5qmgnv3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

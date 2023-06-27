@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/_285sdp"
+    android:layout_gravity="center_horizontal"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="@dimen/_221sdp"
+    android:paddingBottom="@dimen/_8sdp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginHorizontal="@dimen/_6sdp"
+        android:elevation="@dimen/_4sdp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_width="@dimen/_250sdp"
+        android:background="@drawable/round_rectangle3"
+        android:layout_height="@dimen/_200sdp"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <RelativeLayout
+            android:layout_marginHorizontal="@dimen/_1sdp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:id="@+id/relativeContainer"
+            android:layout_width="@dimen/_200sdp"
+            android:layout_height="@dimen/_200sdp"
+            android:gravity="center" >
+
+            <!--put image.xml as background to your image view-->
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/imgText"
+                android:layout_width="@dimen/_199sdp"
+                android:layout_height="@dimen/_198sdp"
+                android:layout_centerInParent="true"
+                android:layout_marginHorizontal="@dimen/_1sdp"
+                android:layout_marginVertical="@dimen/_2sdp"
+                android:background="@color/bg_color1"
+                android:src="@drawable/istockphoto"
+                app:shapeAppearanceOverlay="@style/rounded_corner" />
+
+            <TextView
+                android:id="@+id/txtTodaysPostText"
+                android:layout_width="@dimen/_180sdp"
+                android:layout_height="@dimen/_200sdp"
+                android:layout_marginHorizontal="@dimen/_8sdp"
+                android:layout_marginTop="@dimen/_50sdp"
+                android:layout_marginBottom="@dimen/_35sdp"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_14sdp" />
+
+        </RelativeLayout>
+
+
+
+        <ImageView
+            android:layout_marginTop="@dimen/_24sdp"
+            android:layout_width="@dimen/_35sdp"
+            android:layout_height="@dimen/_35sdp"
+            app:layout_constraintTop_toTopOf="@id/relativeContainer"
+            app:layout_constraintLeft_toLeftOf="@id/imgSaveBtn"
+            android:id="@+id/imgShareBtn"
+            android:src="@drawable/sharealtsquare"/>
+
+        <ImageView
+            android:layout_marginBottom="@dimen/_24sdp"
+            android:layout_width="@dimen/_32sdp"
+            android:layout_height="@dimen/_32sdp"
+            app:layout_constraintBottom_toBottomOf="@id/relativeContainer"
+            android:layout_marginLeft="@dimen/_6sdp"
+            app:layout_constraintLeft_toRightOf="@id/relativeContainer"
+            android:id="@+id/imgSaveBtn"
+            android:src="@drawable/bookmark"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

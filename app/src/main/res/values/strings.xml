@@ -1,0 +1,32 @@
+<resources>
+    <string name="login_text">Login</string>
+    <string name="login_username">Username</string>
+    <string name="login_password">Password</string>
+    <string name="app_name">SooVichar</string>
+    <string name="category">Category</string>
+    <string name="language">Language</string>
+    <string name="marathi">Marathi</string>
+    <string name="hindi">Hindi</string>
+    <string name="english">English</string>
+    <string name="goodThought">Good Thought</string>
+    <string name="morning">Morning</string>
+    <string name="motivational">Motivational</string>
+    <string name="select_image">Select Image</string>
+    <string name="thoughtText">Thought</string>
+    <string name="authorText">Author</string>
+    <string name="upload_thoughtText">Upload Thought</string>
+    <string name="forgot_passwordText">Forgot password?</string>
+    <string name="thoughtsText">Thoughts</string>
+    <string name="proverbsText">Proverbs</string>
+    <string name="today_s_nproverb">Today\'s\nProverbs</string>
+    <string name="today_s_thoughts">Today\'s Thoughts</string>
+    <string name="today_s_nword">Today\'s\nWords</string>
+    <string name="wordsText">Words</string>
+    <string name="jokesText">Jokes</string>
+    <string name="profileText">Profile</string>
+    <string name="upload">Upload</string>
+    <string name="about">About</string>
+    <string name="savedText">Saved</string>
+    <string name="settingsText">Settings</string>
+
+</resources>

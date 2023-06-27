@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="@color/bg_color"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:background="@color/bg_color"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_marginStart="@dimen/_6sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:text="@string/app_name"
+            android:textSize="32sp"
+            android:id="@+id/txtAppName"/>
+
+        <TextView
+            android:textColor="@color/text_color"
+            android:layout_marginLeft="@dimen/_6sdp"
+            android:textSize="@dimen/_20sdp"
+            android:padding="@dimen/_2sdp"
+            android:layout_marginTop="@dimen/_4sdp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:id="@+id/txtTodayThoughts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/today_s_thoughts"
+            app:layout_constraintTop_toBottomOf="@id/txtAppName"/>
+
+
+        <HorizontalScrollView
+            android:layout_marginTop="@dimen/_4sdp"
+            android:id="@+id/choiceTab"
+            android:layout_width="wrap_content"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/txtTodayThoughts">
+
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:id="@+id/todaySRecyclerThoughts1"/>
+
+                <ProgressBar
+                    android:id="@+id/progressbarThoughts"
+                    android:visibility="visible"
+                    android:layout_marginLeft="@dimen/_8sdp"
+                    android:layout_width="@dimen/_270sdp"
+                    android:layout_height="@dimen/_200sdp"
+                    android:padding="@dimen/_50sdp"
+                    android:background="@drawable/round_rectangle3"/>
+
+                <RelativeLayout
+                    android:layout_marginTop="@dimen/_7sdp"
+                    android:layout_marginHorizontal="@dimen/_1sdp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:id="@+id/relativeContainerThoughts"
+                    android:layout_width="@dimen/_200sdp"
+                    android:layout_height="@dimen/_200sdp"
+                    android:gravity="center" >
+
+                    <!--put image.xml as background to your image view-->
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/imgMoreThoughts"
+                        android:layout_width="@dimen/_199sdp"
+                        android:layout_height="@dimen/_198sdp"
+                        android:layout_centerInParent="true"
+                        android:layout_marginHorizontal="@dimen/_1sdp"
+                        android:layout_marginVertical="@dimen/_2sdp"
+                        android:background="@color/bg_color1"
+                        android:src="@drawable/istockphoto"
+                        app:shapeAppearanceOverlay="@style/rounded_corner" />
+
+                    <TextView
+                        android:background="@drawable/round_rectangle2"
+                        android:text="More\nThoughts"
+                        android:padding="@dimen/_8sdp"
+                        android:id="@+id/txtMoreThoughts"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_36sdp" />
+                </RelativeLayout>
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+
+        <TextView
+            android:textColor="@color/text_color"
+            android:layout_marginStart="@dimen/_6sdp"
+            android:textSize="@dimen/_20sdp"
+
+            android:padding="@dimen/_2sdp"
+            android:layout_marginTop="@dimen/_4sdp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:id="@+id/txtTodaysJokes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Today's Jokes"
+            app:layout_constraintTop_toBottomOf="@id/choiceTab"/>
+
+
+        <HorizontalScrollView
+            android:layout_marginTop="@dimen/_4sdp"
+            android:id="@+id/jokesScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/txtTodaysJokes">
+
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:id="@+id/todaySRecyclerJokes"/>
+
+                <ProgressBar
+                    android:id="@+id/progressbarJokes"
+                    android:visibility="visible"
+                    android:layout_marginLeft="@dimen/_8sdp"
+                    android:layout_width="@dimen/_270sdp"
+                    android:layout_height="@dimen/_200sdp"
+                    android:padding="@dimen/_50sdp"
+                    android:background="@drawable/round_rectangle3"/>
+
+                <RelativeLayout
+                    android:layout_marginTop="@dimen/_7sdp"
+                    android:layout_marginHorizontal="@dimen/_1sdp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:id="@+id/relativeContainer"
+                    android:layout_width="@dimen/_200sdp"
+                    android:layout_height="@dimen/_200sdp"
+                    android:gravity="center" >
+
+                    <!--put image.xml as background to your image view-->
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/imgMoreJokes"
+                        android:layout_width="@dimen/_199sdp"
+                        android:layout_height="@dimen/_198sdp"
+                        android:layout_centerInParent="true"
+                        android:layout_marginHorizontal="@dimen/_1sdp"
+                        android:layout_marginVertical="@dimen/_2sdp"
+                        android:background="@color/bg_color1"
+                        android:src="@drawable/jokes_background1"
+                        app:shapeAppearanceOverlay="@style/rounded_corner" />
+
+                    <TextView
+                        android:background="@drawable/round_rectangle2"
+                        android:text="More\nJokes"
+                        android:padding="@dimen/_8sdp"
+                        android:id="@+id/txtMoreJokes"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_36sdp" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+
+        <RelativeLayout
+
+            android:elevation="@dimen/_5sdp"
+            android:id="@+id/thoughtBtn"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:layout_marginLeft="@dimen/_12sdp"
+            android:layout_width="@dimen/_130sdp"
+            android:layout_height="@dimen/_100sdp"
+            android:background="@drawable/round_rectangle1"
+            app:layout_constraintTop_toBottomOf="@id/jokesScrollView">
+
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:background="@color/bg_color1"
+                android:layout_marginHorizontal="@dimen/_1sdp"
+                android:layout_marginVertical="@dimen/_2sdp"
+                android:src="@drawable/thought_bg"
+                app:shapeAppearanceOverlay="@style/rounded_corner1" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_1sdp"
+                android:layout_marginTop="@dimen/_1sdp"
+                android:layout_marginEnd="@dimen/_1sdp"
+                android:layout_marginBottom="@dimen/_1sdp"
+                android:background="@drawable/round_rectangle4"
+                android:gravity="center"
+                android:text="@string/thoughtsText"
+                android:textColor="@color/white"
+                android:textSize="24sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:elevation="@dimen/_5sdp"
+            app:layout_constraintRight_toRightOf="parent"
+            android:id="@+id/proverbBtn"
+            android:layout_marginRight="@dimen/_12sdp"
+            android:layout_width="@dimen/_130sdp"
+            android:layout_height="@dimen/_100sdp"
+            android:background="@drawable/round_rectangle1"
+            app:layout_constraintTop_toTopOf="@id/thoughtBtn">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:layout_marginHorizontal="@dimen/_1sdp"
+                android:layout_marginVertical="@dimen/_2sdp"
+                android:background="@color/bg_color1"
+                android:src ="@drawable/proverbs_bg"
+                app:shapeAppearanceOverlay="@style/rounded_corner1" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="@dimen/_1sdp"
+                android:layout_marginTop="@dimen/_1sdp"
+                android:layout_marginEnd="@dimen/_1sdp"
+                android:layout_marginBottom="@dimen/_1sdp"
+                android:background="@drawable/round_rectangle4"
+                android:gravity="center"
+                android:text="@string/proverbsText"
+                android:textColor="@color/white"
+                android:textSize="24sp" />
+
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_marginBottom="@dimen/_8sdp"
+            android:elevation="@dimen/_10sdp"
+            android:id="@+id/WordsBtn"
+            app:layout_constraintLeft_toLeftOf="@id/thoughtBtn"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:layout_width="@dimen/_130sdp"
+            android:layout_height="@dimen/_100sdp"
+            android:background="@drawable/round_rectangle1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/thoughtBtn">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:layout_marginHorizontal="@dimen/_1sdp"
+                android:layout_marginVertical="@dimen/_2sdp"
+                android:background="@color/bg_color1"
+                android:src ="@drawable/words_bg"
+                app:shapeAppearanceOverlay="@style/rounded_corner1" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:layout_margin="@dimen/_1sdp"
+                android:background="@drawable/round_rectangle4"
+                android:gravity="center"
+                android:text="@string/wordsText"
+                android:textColor="@color/white"
+                android:textSize="24sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/jokesBtn"
+            android:elevation="@dimen/_5sdp"
+            app:layout_constraintRight_toRightOf="@id/proverbBtn"
+            android:layout_width="@dimen/_130sdp"
+            android:layout_height="@dimen/_100sdp"
+            android:background="@drawable/round_rectangle1"
+            app:layout_constraintTop_toTopOf="@id/WordsBtn">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:layout_marginHorizontal="@dimen/_1sdp"
+                android:layout_marginVertical="@dimen/_2sdp"
+                android:background="@color/bg_color1"
+                android:src ="@drawable/jokes_bg"
+                app:shapeAppearanceOverlay="@style/rounded_corner1" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="@dimen/_1sdp"
+                android:layout_marginTop="@dimen/_1sdp"
+                android:layout_marginEnd="@dimen/_1sdp"
+                android:layout_marginBottom="@dimen/_1sdp"
+                android:background="@drawable/round_rectangle4"
+                android:gravity="center"
+                android:text="@string/jokesText"
+                android:textColor="@color/white"
+                android:textSize="24sp" />
+
+
+
+        </RelativeLayout>
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

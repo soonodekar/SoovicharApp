@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    
+    <LinearLayout
+        android:id="@+id/profileTab"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:elevation="@dimen/_5sdp"
+        android:background="@drawable/round_rectangle1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="@dimen/_120sdp"
+        android:orientation="vertical"
+        android:layout_height="@dimen/_80sdp">
+        
+        <ImageView
+            android:background="@drawable/round_rectangle"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_width="@dimen/_80sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_gravity="center"/>
+        <TextView
+            android:text="@string/profileText"
+            android:textSize="24sp"
+android:textColor="@color/text_color"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"/>
+            
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/settingsTab"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginEnd="@dimen/_8sdp"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:elevation="@dimen/_5sdp"
+        android:background="@drawable/round_rectangle1"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="@dimen/_120sdp"
+        android:orientation="vertical"
+        android:layout_height="@dimen/_80sdp">
+
+        <ImageView
+            android:background="@drawable/round_rectangle"
+            android:src="@drawable/settings"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_width="@dimen/_80sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_gravity="center"/>
+        <TextView
+            android:textSize="24sp"
+            android:textColor="@color/text_color"
+            android:text="@string/settingsText"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/SavedTab"
+        android:layout_marginEnd="@dimen/_8sdp"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:elevation="@dimen/_5sdp"
+        android:background="@drawable/round_rectangle1"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/infoTab"
+        android:layout_width="@dimen/_120sdp"
+        android:orientation="vertical"
+        android:layout_height="@dimen/_80sdp">
+
+        <ImageView
+            android:background="@drawable/round_rectangle"
+            android:src="@drawable/bookmark"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_width="@dimen/_80sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_gravity="center"/>
+        <TextView
+            android:textSize="24sp"
+            android:textColor="@color/text_color"
+            android:text="@string/savedText"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"/>
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/infoTab"
+        android:layout_marginEnd="@dimen/_8sdp"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:elevation="@dimen/_5sdp"
+        android:background="@drawable/round_rectangle1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/profileTab"
+        android:layout_width="@dimen/_120sdp"
+        android:layout_marginTop="@dimen/_24sdp"
+        android:orientation="vertical"
+        android:layout_height="@dimen/_80sdp">
+
+        <ImageView
+            android:background="@drawable/round_rectangle"
+            android:src="@drawable/info"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_width="@dimen/_80sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_gravity="center"/>
+        <TextView
+            android:textSize="24sp"
+            android:textColor="@color/text_color"
+            android:text="@string/about"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"/>
+
+    </LinearLayout>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
